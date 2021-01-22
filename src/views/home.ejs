@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Legend Dashboard
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <div class="body-layer">
+
+        <!-- navbar -->
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Legend</label>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Commands</a></li>
+                <% if (user) { %>
+                    <li><a href="#"><img
+                                src="https://cdn.discordapp.com/avatars/<%= user.discordId %>/<%= user.avatar %>.webp"
+                                style="margin-top: -10px;
+                                margin-bottom: -10px;
+                             border-radius: 50%; height:30px; width:30px;">
+                            <%= user.username %>#<%= user.tag %>
+                        </a></li>
+                    <% } else { %>
+                        <li><a href="#">Login</a></li>
+                        <% } %>
+            </ul>
+        </nav>
+
+        <div class="main-frame">
+            <h1>Legend Bot</h1>
+            <p>Build the best discord server!</p>
+            <div class="form">
+                <a href="#" class="btn-green">
+                    <span>Add Legend Bot</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
